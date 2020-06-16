@@ -5,12 +5,14 @@
         "target": "ESNext", // Specify ECMAScript target version: "ES3" (default) "ES5" "ES6"/"ES2015" "ES2016" "ES2017" "ES2018" "ES2019" "ES2020" "ESNext"
         "module": "CommonJS", // Specify module code generation: 'None', 'CommonJS', 'AMD', 'System', 'UMD', 'ES6', 'ES2015', 'ES2020' or 'ESNext'. Only 'AMD' and 'System' can be used in conjunction with --outFile.
         "rootDir": "src", // Specifies the root directory of input files
-        "outDir": "build", // Redirect output structure to the directory.
-        "declaration": false, // Generates corresponding .d.ts file.
-        "noEmit": true, // Do not emit declaration files.
-        "isolatedModules": true, // Disallow features that require cross-file information for emit.
+        // "outDir": "build", // Redirect output structure to the directory.
+        "declaration": true, // Generates corresponding .d.ts file.
+        "composite": true, // Enables building for project references.
+        "noEmit": false, // Do not emit declaration files.
+        "isolatedModules": false, // Disallow features that require cross-file information for emit.
         "removeComments": true, // Remove all comments except copy-right header comments beginning with /*!
         "esModuleInterop": true, // Emit '__importStar' and '__importDefault' helpers for runtime babel ecosystem compatibility and enable '--allowSyntheticDefaultImports' for typesystem compatibility.
+        "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
         "lib": ["es6", "es7", "esnext", "dom"], // List of library files to be included in the compilation
         "sourceMap": true, // Generates corresponding .map file.
         "allowJs": true, // Allow javascript files to be compiled.

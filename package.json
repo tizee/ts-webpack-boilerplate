@@ -6,7 +6,10 @@
   "license": "MIT",
   "scripts": {
     "ts-check": "tsc --noEmit",
-    "ts-check:watch": "tsc --noEmit --watch"
+    "ts-check:watch": "tsc --noEmit --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "lint": "eslint src",
+    "format": "prettier src/**/*.{js,ts,jsx,tsx} --write"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
